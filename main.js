@@ -16,7 +16,7 @@
     
     function draw(){
         image(video,0,0,300,300);
-        image(img,noseX,noseY,40,20);
+        image(img,noseX,noseY,70,30);
     }
     
     function take_snapshot(){
@@ -32,8 +32,8 @@
         if(resultes.length >0){
             console.log("poseNet is working");
             console.log(resultes)
-            noseX = resultes[0].pose.nose.x;
-            noseY = resultes[0].pose.nose.y;
+            noseX = resultes[0].pose.nose.x -218;
+            noseY = resultes[0].pose.nose.y -95;
             console.log("nose x = "+noseX);
             console.log("nose y = "+noseY);
         }
